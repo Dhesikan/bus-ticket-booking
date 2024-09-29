@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SADUKUDU VANDI</title>
+    <link rel="icon" href="bu.png" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 30px;
+        background-color: #f5f5f5;
+      }
+
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        font-weight: bold;
+      }
+      a[href="mailto:"] {
+        color: chocolate;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        border-radius: 20px;
+      }
+      label {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        text-decoration: none;
+      }
+      #name:hover,
+      #email:hover,
+      #age:hover,
+      #country:hover,
+      #comments:hover,
+      #number:hover {
+        background-color: rgb(97, 221, 221);
+      }
+      #name:active,
+      #email:active,
+      #age:active,
+      #country:active,
+      #comments:active,
+      #number:active {
+        background-color: rgb(255, 238, 139);
+      }
+
+      input[type="submit"]:active {
+        background-color: #005eda;
+      }
+      input[type="submit"]:hover {
+        background-color: darkorange;
+      }
+      #gen {
+        cursor: pointer;
+      }
+      h1 {
+        font-family: "Times New Roman", Times, serif;
+        position: relative;
+        padding-left: 10px;
+      }
+      .d {
+        text-align: center;
+      }
+      #gen {
+        display: inline;
+      }
+      * {
+        caret-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm" action="login proj2.html">
+      <div class="d">
+        <h1>LOGIN</h1>
+      </div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="age">Age:</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        minlength="1"
+        max="50"
+        required
+      />
+
+      <label class="gender">Male:</label>
+      <input type="radio" id="gen" name="age" required /><br /><br />
+
+      <label class="gender">Female:</label>
+      <input type="radio" id="gen" name="age" required /><br /><br />
+      <!--label for="country">Country:</label>
+  <select id="country" name="country" required>
+    <option value="">Choose</option>
+    <option value="IND">IND</option>
+    <option value="USA">USA</option>
+    <option value="Canada">Canada</option>
+
+    <option value="UK">UK</option>
+    <!-- Add more options as needed-- >
+  </select-->
+      <label for="name">Phone No.:</label>
+      <input type="number" id="number" name="number" maxlength="10" required />
+      <br /><br />
+      <input type="submit" value="LOGIN" />
+    </form>
+
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
+<script>
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+  
+  const formData = new FormData(this);
+  const data = {};
+  for (const [key, value] of formData.entries()) {
+    data[key] = value;
+  }
+  
+  const excelData = [Object.keys(data), Object.values(data)];
+  const sheet = XLSX.utils.aoa_to_sheet(excelData);
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, sheet, 'Sheet1');
+  
+  const fileName = 'form_data.xlsx';
+  XLSX.writeFile(workbook, fileName);
+
+  alert('Form data exported to ' + fileName);
+});
+</script-->
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SADUKUDU VANDI</title>
+    <link rel="icon" href="bu.png" />
+  </head>
+  <body>
+    <script>
+      function myFunction() {
+        alert("CONFORM");
+      }
+    </script>
+    <style>
+      form {
+        max-width: 500px;
+        margin: 10px auto;
+        background-color: white;
+        padding: 22px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      #bt {
+        background-color: aquamarine;
+        border-radius: 20px;
+      }
+      #b1 {
+        border-radius: 20px;
+      }
+      #b2 {
+        border-radius: 20px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        margin-top: 15px;
+        font-family: "Times New Roman", Times, serif;
+      }
+      input[type="button"] {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: "Times New Roman", Times, serif;
+      }
+      #b1,
+      #b2 {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        font-weight: bolder;
+      }
+      #b1:active {
+        background-color: rgb(255, 238, 139);
+      }
+      #b2:active {
+        background-color: rgb(255, 238, 139);
+      }
+      #b1:hover {
+        background-color: rgb(148, 242, 245);
+      }
+      #b2:hover {
+        background-color: rgb(148, 242, 245);
+      }
+      input[type="submit"]:hover {
+        background-color: darkorange;
+      }
+      input[type="button"]:hover {
+        background-color: darkorange;
+      }
+      input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 20px black;
+        border-radius: 20px;
+        box-sizing: border-box;
+      }
+      input[type="date"]:hover {
+        background-color: rgb(148, 242, 245);
+      }
+      input[type="number"] {
+        width: 99%;
+        padding: 10px;
+        border-radius: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+    </style>
+
+    <form id="myfor" action="login proj3.html">
+      <center>
+        <h1>BOOK BUS TICIKET</h1>
+        <label>ENTER SOURCE📍</label><br />
+        <input type="text" id="b1" required /><br /><br /><br />
+        <label>ENTER DESINATION📍 </label><br />
+        <input type="text" id="b2" required /><br /><br />
+        <div>
+          <label> ENTER DATE📅</label><br />
+          <input type="date" id="date" required />
+        </div>
+        <div>
+          <center>
+            <label> NO.OF.TICIKETS </label><br />
+            <input type="number" max="10" />
+          </center>
+          <a href="index.html">
+            <input type="button" value="BACK" />
+          </a>
+        </div>
+        <input type="submit" value="CONFORM" onclick="myFunction()" />
+      </center>
+    </form>
+  </body>
+</html>
